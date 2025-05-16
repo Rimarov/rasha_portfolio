@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palace Architectural Concept - Rasha Issa Nassar</title>
+  <link rel="stylesheet" href="Assets/Css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="scripts.js" defer></script>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 30%;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Rasha Issa Nassar</h1>
+      <p>Architect & BIM Manager</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container project-card">
+      <h2>Palace Architectural Concept</h2>
+      <p>
+        This palace project embodies classic grandeur and modern sensibility. Inspired by traditional palatial symmetry and scale, it incorporates refined details with modern functionality. The project includes conceptual design, 3D architectural modeling, façade studies, and interior layout planning.
+      </p>
+
+      <div class="gallery">
+        <img src="images/palace1.jpg" alt="Palace Image 1" onclick="openLightbox(this.src)">
+        <img src="images/palace2.jpg" alt="Palace Image 2" onclick="openLightbox(this.src)">
+        <img src="images/palace3.jpg" alt="Palace Image 3" onclick="openLightbox(this.src)">
+      </div>
+
+      <br />
+      <a href="projects.html" style="display:inline-block; margin-top:20px; color:#e91e63;">&larr; Back to Projects</a>
+    </section>
+  </main>
+
+  <div class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview">
+  </div>
+
+  <footer>
+    <div class="container">
+        <div class="social-icons">
+            <a href="#" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/essa.r6" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://t.me/Arch0Nasar" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
+            <a href="https://www.linkedin.com/in/rasha-nassar-a388ab17b/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/+963" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:arch.rnassar@gmail.com" target="_blank" class="gmail"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+        <p>&copy; 2025 Rasha Issa Nassar. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

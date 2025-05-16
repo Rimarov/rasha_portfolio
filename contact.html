@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Rasha Issa Nassar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="Assets/Css/style.css" />
+  <style>
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      font-family: inherit;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #e91e63;
+    }
+
+    button {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+    .form-success {
+      margin-top: 15px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Rasha Issa Nassar</h1>
+      <p>Architect & BIM Manager</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container project-card">
+      <h2>Contact Me</h2>
+      <p>If you have any inquiries, collaborations, or just want to say hello — feel free to reach out using the form below:</p>
+
+      <form action="#" method="POST" onsubmit="return showSuccessMessage();">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <div id="form-success" class="form-success" style="display: none;">Your message has been sent!</div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <a href="#" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/essa.r6" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://t.me/Arch0Nasar" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
+        <a href="https://www.linkedin.com/in/rasha-nassar-a388ab17b/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/+963" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+        <a href="mailto:arch.rnassar@gmail.com" target="_blank" class="gmail"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+      <p>&copy; 2025 Rasha Issa Nassar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function showSuccessMessage() {
+      document.getElementById("form-success").style.display = "block";
+      return false; // prevents actual submission (for testing/demo)
+    }
+  </script>
+</body>
+</html>
